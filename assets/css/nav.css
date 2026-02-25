@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+
+    background: #1e293b;
+    color: white;
+    padding: 25px;
+    width: 230px;
+    height: 100vh;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+
+    & a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px;
+        border-radius: 5px;
+
+        &:hover {
+            background: #334155;
+        }
+    }
+}
+
+#account {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+}
+
+#avatar {
+    width: 40px;
+    height: 40px;
+    background: #334155;
+    border-radius: 50%;
+}
