@@ -30,19 +30,37 @@
         </nav>
 
         <section>
-            <h3>Giao dịch gần đây</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Ngày</th>
-                        <th>Loại tiền (Thu/Chi)</th>
-                        <th>Số tiền</th>
-                        <th>Ghi chú</th>
-                        <th>Hành động</th>
-                    </tr>
-                </thead>
-                <tbody id="transactionList"></tbody>
-            </table>
+            <div id="table">
+                <h1 id="table-header">Giao dịch gần đây</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ngày</th>
+                            <th>Loại tiền (Thu/Chi)</th>
+                            <th>Số tiền</th>
+                            <th>Ghi chú</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transactionList">
+                        <tr>
+                            <td>25/02/2026</td>
+                            <td>Thu</td>
+                            <td>100000</td>
+                            <td>Thu tiền</td>
+                            <td><button class="btn-edit">Sửa</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>25/02/2026</td>
+                            <td>Thu</td>
+                            <td>100000</td>
+                            <td>Thu tiền</td>
+                            <td><button class="btn-edit">Sửa</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
     </div>
 </body>
