@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/nav.css">
+    <link rel="stylesheet" href="./assets/css/history.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="title">
+                <h2>💰 Ví của bạn</h2>
+                <p>Xin chào</p>
+            </div>
+
+            <menu>
+                <a href="./main.html">Tổng quan</a>
+                <a href="./history.html">Lịch sử giao dịch</a>
+                <a href="./add.html">Thêm giao dịch</a>
+            </menu>
+
+            <div id="account">
+                <div id="avatar"></div>
+                <p>Admin</p>
+            </div>
+        </nav>
+
+        <section>
+            <h3>Giao dịch gần đây</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ngày</th>
+                        <th>Loại tiền (Thu/Chi)</th>
+                        <th>Số tiền</th>
+                        <th>Ghi chú</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionList"></tbody>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>
