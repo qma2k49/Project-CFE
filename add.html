@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm giao dịch</title>
+    <link rel="stylesheet" href="./assets/css/add.css">
+    <link rel="stylesheet" href="./assets/css/nav.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="title">
+                <h2>💰 Ví của bạn</h2>
+                <p>Xin chào</p>
+            </div>
+
+            <menu>
+                <a href="./main.html">Tổng quan</a>
+                <a href="./history.html">Lịch sử giao dịch</a>
+                <a href="./add.html">Thêm giao dịch</a>
+            </menu>
+
+            <div id="account">
+                <div id="avatar"></div>
+                <p>Admin</p>
+            </div>
+        </nav>
+
+        <section>
+            <div class="modal-header">
+                <h2>Thêm khoản thu/chi</h2>
+                <span id="close-btn">X</span>
+            </div>
+
+            <form id="transaction-form">
+                <div class="information-form">
+
+                    <div class="input-field">
+                        <label>Ngày:</label>
+                        <input type="date">
+                    </div>
+                    <div class="input-field">
+                        <label>Số tiền:</label>
+                        <input type="number" placeholder="Nhập số tiền vào đây">
+                    </div>
+                    <div class="input-field">
+                        <label>Nội dung:</label>
+                        <input type="text" placeholder="Nhập nội dung vào đây">
+                    </div>
+
+                </div>
+
+                <p id="note">Vui lòng điền đầy đủ thông tin!</p>
+                <button type="button" id="btn-save">Lưu</button>
+
+            </form>
+        </section>
+
+    </div>
+</body>
+
+</html>
