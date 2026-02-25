@@ -3,3 +3,45 @@
     flex-direction: row;
     justify-content: start;
 }
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+    width: 100%;
+}
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#stat-blue{
+    background: #3b82f6;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 25px;
+
+}
+#stat-green{
+    background: #22c55e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 25px;
+}
+#stat-red{
+    background: #ef4444;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 25px;
+}
+     
+
+
+ 
