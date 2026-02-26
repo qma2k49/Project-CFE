@@ -63,7 +63,8 @@ section {
 
 /* Style cho các nút Action */
 .btn-edit {
-    background-color: #00c48c;
+    display: none;
+    background-color: rgb(116, 116, 0);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -78,8 +79,8 @@ section {
 }
 
 .btn-edit:hover {
-    background-color: #00b37e;
-    transform: scale(1.2);
+    background-color: rgb(116, 116, 0);
+    transform: scale(1.05);
 }
 
 /* .btn-delete {
