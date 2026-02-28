@@ -5,36 +5,43 @@ function displayTransaction() {
 
     transactionList.innerHTML = '';
 
-    for (let index = 0; index < transactions.length; index++) {
-        const transaction = transactions[index];
+    transactions.forEach((transaction, index) => {
         const row = document.createElement('tr');
 
         row.innerHTML = `
-        <td>${transaction.date}</td>
-        <td>
+        <td data-label="Ngày">${transaction.date}</td>
+        <td data-label="Loại tiền">
             <span class="status-badge ${transaction.type === 'Thu' ? 'status-thu' : 'status-chi'}">${transaction.type}</span>
         </td>
-        <td>${transaction.amount}</td>
-        <td>${transaction.note}</td>
-        <td class="btn-action">
-            <button class="btn-edit">Sửa</button>
-            <button class="btn-delete" onclick="deleteTransaction(${index})">Xóa</button>
+        <td data-label="Số tiền">${new Intl.NumberFormat('vi-VN').format(transaction.amount)} VNĐ</td>
+        <td data-label="Ghi chú">${transaction.note}</td>
+        <td data-label="Hành động">
+            <div class="btn-action-group">
+                <button class="btn-edit" onclick="editTransaction(${index})">Sửa</button>
+                <button class="btn-delete" onclick="deleteTransaction(${index})">Xóa</button>
+            </div>
         </td>
         `;
 
         transactionList.appendChild(row);
-    }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     displayTransaction();
 
-    window.deleteTransaction = function (id) {
+    // Global Edit Function
+    window.editTransaction = function (index) {
+        window.location.href = `add.html?index=${index}`;
+    };
+
+    // Global Delete Function
+    window.deleteTransaction = function (index) {
         if (confirm('Bạn có chắc chắn muốn xóa giao dịch này?')) {
             const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
-            transactions.splice(id, 1);
+            transactions.splice(index, 1);
             localStorage.setItem('transactions', JSON.stringify(transactions));
             displayTransaction();
         }
-    }
+    };
 });
