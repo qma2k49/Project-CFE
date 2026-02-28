@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
         const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
-        transactions.push(transaction);
+        transactions.splice(0, 0, transaction);
         localStorage.setItem('transactions', JSON.stringify(transactions));
 
         // Xóa dữ liệu trong form
