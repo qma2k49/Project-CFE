@@ -14,8 +14,13 @@ nav {
     background: #1e293b;
     color: white;
     padding: 25px;
-    width: 20%;
+    width: 260px;
+    /* Fixed width for consistency */
+    flex-shrink: 0;
+    /* Prevent squashing */
     height: 100vh;
+    position: sticky;
+    top: 0;
 }
 
 .title {
