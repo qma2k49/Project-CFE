@@ -37,7 +37,7 @@
                     <thead>
                         <tr>
                             <th>Ngày</th>
-                            <th>Loại tiền (Thu/Chi)</th>
+                            <th>Loại tiền</th>
                             <th>Số tiền</th>
                             <th>Ghi chú</th>
                             <th>Hành động</th>
@@ -45,22 +45,29 @@
                     </thead>
                     <tbody id="transactionList">
                         <tr>
-                            <td>25/02/2026</td>
-                            <td>Thu</td>
-                            <td>100000</td>
-                            <td>Thu tiền</td>
-                            <td class="btn-action">
-                                <button class="btn-edit">Sửa</button>
-                                <button class="btn-delete">Xóa</button>
+                            <td data-label="Ngày">26/02/2026</td>
+                            <td data-label="Loại tiền"><span class="status-badge status-chi">Chi</span></td>
+                            <td data-label="Số tiền">50.000 VNĐ</td>
+                            <td data-label="Ghi chú">Ăn sáng sáng nay</td>
+                            <td data-label="Hành động">
+                                <div class="btn-action-group">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
                             </td>
                         </tr>
 
                         <tr>
-                            <td>25/02/2026</td>
-                            <td>Thu</td>
-                            <td>100000</td>
-                            <td>Thu tiền</td>
-                            <td><button class="btn-edit">Sửa</button></td>
+                            <td data-label="Ngày">25/02/2026</td>
+                            <td data-label="Loại tiền"><span class="status-badge status-thu">Thu</span></td>
+                            <td data-label="Số tiền">100.000 VNĐ</td>
+                            <td data-label="Ghi chú">Lương tháng 2</td>
+                            <td data-label="Hành động">
+                                <div class="btn-action-group">
+                                    <button class="btn-edit">Sửa</button>
+                                    <button class="btn-delete">Xóa</button>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,104 +1,197 @@
+/* thiết kế chũ và thiết lập */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
+    background: #f1f5f9;
+    min-height: 100vh;
 }
 
 section {
-    background: white;
-    padding: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%;
+    flex: 1;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 #table {
+    width: 100%;
+    max-width: 1000px;
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06),
+        0 20px 25px -5px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+#table-header {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2rem;
+    letter-spacing: -0.025em;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+thead th {
+    background: #f8fafc;
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+thead th:first-child {
+    border-top-left-radius: 12px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 12px;
+}
+
+tbody td {
+    padding: 1.25rem 1rem;
+    font-size: 0.95rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+}
+
+tbody tr {
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* trạng thái */
+.status-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-thu {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-chi {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* nút hàng động */
+.btn-action-group {
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-
-    & table {
-        width: 80%;
-        border: 1px solid #ddd;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    & thead tr {
-        background-color: #ecf3f8;
-        color: #4a5568;
-        text-align: center;
-        font-weight: bold;
-        font-size: 25px;
-    }
-}
-
-
-#table th {
-    padding: 16px;
-    font-size: 18px;
-}
-
-#table td {
-    padding: 16px;
-    font-size: 15px;
-    color: #333;
-}
-
-#table tbody tr {
-    background-color: #ffffff;
-}
-
-#table tbody tr:nth-child(odd) {
-    background-color: #f2f7fb;
-}
-
-#table tbody tr:hover {
-    background-color: #e2eef7;
-}
-
-
-/* Style cho các nút Action */
-.btn-action {
-    display: flex;
-    gap: 10px;
+    gap: 0.75rem;
 }
 
 .btn-edit,
 .btn-delete {
-    /* display: none; */
-    background-color: rgb(116, 116, 0);
-    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
-    padding: 8px 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 500;
-    align-items: center;
-    gap: 6px;
-    cursor: pointer;
-    transition: all 0.2s ease;
 }
 
-.btn-edit:hover,
-.btn-delete:hover {
-    background-color: rgb(116, 116, 0);
-    transform: scale(1.05);
+.btn-edit {
+    background: #eff6ff;
+    color: #2563eb;
 }
 
-/* .btn-delete {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #718096;
-    margin-left: 15px;
-    font-size: 16px;
+.btn-edit:hover {
+    background: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background: #fff1f2;
+    color: #e11d48;
 }
 
 .btn-delete:hover {
-    color: #e53e3e;
-} */
+    background: #e11d48;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
+    transform: translateY(-1px);
+}
+
+/* điều chỉnh đáp ứng */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    #table {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        font-weight: 700;
+        color: #64748b;
+    }
+}
