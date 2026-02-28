@@ -7,6 +7,7 @@
     <title>Thêm giao dịch</title>
     <link rel="stylesheet" href="./assets/css/add.css">
     <link rel="stylesheet" href="./assets/css/nav.css">
+    <script src="./assets/js/add.js" defer></script>
 </head>
 
 <body>
@@ -39,27 +40,27 @@
 
                     <div class="input-field">
                         <label>Ngày:</label>
-                        <input type="date">
+                        <input id="date" type="date">
                     </div>
                     <div class="input-field">
                         <label>Loại tiền (Thu/Chi)</label>
-                        <select id="type">
+                        <select id="selection">
                             <option value="Thu">Thu</option>
                             <option value="Chi">Chi</option>
                         </select>
                     </div>
                     <div class="input-field">
                         <label>Số tiền:</label>
-                        <input type="number" placeholder="Nhập số tiền vào đây">
+                        <input id="amount" type="number" placeholder="Nhập số tiền vào đây">
                     </div>
                     <div class="input-field">
                         <label>Nội dung:</label>
-                        <input type="text" placeholder="Nhập nội dung vào đây">
+                        <input id="note" type="text" placeholder="Nhập nội dung vào đây">
                     </div>
 
                 </div>
 
-                <p id="note">Vui lòng điền đầy đủ thông tin!</p>
+                <p id="notification">Vui lòng điền đầy đủ thông tin!</p>
                 <button type="button" id="btn-save">Lưu</button>
 
             </form>
