@@ -62,8 +62,14 @@ section {
 
 
 /* Style cho các nút Action */
-.btn-edit {
-    display: none;
+.btn-action {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-edit,
+.btn-delete {
+    /* display: none; */
     background-color: rgb(116, 116, 0);
     color: white;
     border: none;
@@ -78,7 +84,8 @@ section {
     transition: all 0.2s ease;
 }
 
-.btn-edit:hover {
+.btn-edit:hover,
+.btn-delete:hover {
     background-color: rgb(116, 116, 0);
     transform: scale(1.05);
 }
