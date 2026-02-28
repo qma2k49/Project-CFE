@@ -11,7 +11,9 @@ function displayTransaction() {
 
         row.innerHTML = `
         <td>${transaction.date}</td>
-        <td>${transaction.type}</td>
+        <td>
+            <span class="status-badge ${transaction.type === 'Thu' ? 'status-thu' : 'status-chi'}">${transaction.type}</span>
+        </td>
         <td>${transaction.amount}</td>
         <td>${transaction.note}</td>
         <td class="btn-action">

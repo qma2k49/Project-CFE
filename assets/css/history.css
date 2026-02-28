@@ -100,12 +100,13 @@ tbody tr:last-child td {
     border-bottom: none;
 }
 
-/* trạng thái */
 .status-badge {
-    padding: 0.35rem 0.75rem;
-    border-radius: 9999px;
-    font-size: 0.75rem;
-    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: none;
+    text-align: center;
 }
 
 .status-thu {
@@ -157,41 +158,4 @@ tbody tr:last-child td {
     color: #ffffff;
     box-shadow: 0 4px 12px rgba(225, 29, 72, 0.25);
     transform: translateY(-1px);
-}
-
-/* điều chỉnh đáp ứng */
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column;
-    }
-
-    section {
-        padding: 1.5rem;
-    }
-}
-
-@media (max-width: 640px) {
-    #table {
-        padding: 1rem;
-        border-radius: 12px;
-    }
-
-    thead {
-        display: none;
-    }
-
-    tbody td {
-        display: block;
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-    }
-
-    tbody td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 1rem;
-        font-weight: 700;
-        color: #64748b;
-    }
 }
