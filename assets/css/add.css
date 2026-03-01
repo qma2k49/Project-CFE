@@ -1,14 +1,9 @@
-
 .container {
     display: flex;
     background: #f1f5f9;
     min-height: 100vh;
 }
 
-/* điều chỉnh thanh cân bằng bố cục */
-nav {
-    flex-shrink: 0;
-}
 
 section {
     flex: 1;
@@ -17,20 +12,8 @@ section {
     align-items: center;
     justify-content: center;
     padding: 2rem;
-    animation: fadeIn 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .modal-header {
     width: 100%;
@@ -52,7 +35,6 @@ section {
     max-width: 480px;
     padding: 2.5rem;
     border-radius: 20px;
-    /* hiệu ứng đổ bóng */
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.06),
