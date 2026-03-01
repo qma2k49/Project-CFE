@@ -1,4 +1,4 @@
-/* Global Reset & Typography */
+/* thiết lập lại toàn cầu kiểu chữ */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@
     flex-wrap: wrap;
 }
 
-/* Stat Cards Base Styling */
+/* kiểu dáng cơ bản của thẻ */
 .stats>div {
     flex: 1;
     min-width: 280px;
@@ -72,7 +72,7 @@
     letter-spacing: -0.025em;
 }
 
-/* Color Gradients */
+/* chuyển màu */
 #stat-blue {
     background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
@@ -89,8 +89,19 @@
 }
 
 
+/* các yếu tố trang trí */
+.stats>div::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
 
-/* Responsive Focus */
+/* tập trung và đáp ứng */
 @media (max-width: 1024px) {
     .stats {
         flex-direction: column;

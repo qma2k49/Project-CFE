@@ -15,9 +15,9 @@ nav {
     color: white;
     padding: 25px;
     width: 260px;
-    /* Fixed width for consistency */
+    /* chiều rộng cố định để đảm bảo tính nhất thống */
     flex-shrink: 0;
-    /* Prevent squashing */
+    /* ngăn chặn bị đè */
     height: 100vh;
     position: sticky;
     top: 0;
