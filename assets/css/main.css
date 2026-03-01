@@ -36,7 +36,7 @@
 }
 
 /* kiểu dáng cơ bản của thẻ */
-.stats>div {
+.stats div {
     flex: 1;
     min-width: 280px;
     padding: 2.5rem;
@@ -44,18 +44,10 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow:
         0 4px 6px -1px rgba(0, 0, 0, 0.1),
         0 20px 25px -5px rgba(0, 0, 0, 0.05);
     position: relative;
-    overflow: hidden;
-    cursor: default;
-}
-
-.stats>div:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.15);
 }
 
 .stats p {
@@ -72,7 +64,6 @@
     letter-spacing: -0.025em;
 }
 
-/* chuyển màu */
 #stat-blue {
     background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
@@ -89,19 +80,6 @@
 }
 
 
-/* các yếu tố trang trí */
-.stats>div::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 100px;
-    height: 100px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-}
-
-/* tập trung và đáp ứng */
 @media (max-width: 1024px) {
     .stats {
         flex-direction: column;
