@@ -62,3 +62,52 @@ menu {
     background: #334155;
     border-radius: 50%;
 }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 1rem;
+        gap: 1rem;
+        z-index: 50;
+    }
+
+    .title p {
+        display: none;
+    }
+
+    .title h2 {
+        font-size: 1.25rem;
+    }
+
+    menu {
+        flex-direction: row;
+        gap: 0.5rem;
+        flex: 1;
+        justify-content: center;
+    }
+
+    menu a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    #account {
+        gap: 0;
+    }
+
+    #account p {
+        display: none;
+    }
+
+    #avatar {
+        width: 32px;
+        height: 32px;
+    }
+}

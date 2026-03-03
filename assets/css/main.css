@@ -123,3 +123,22 @@
         min-width: 100%;
     }
 }
+
+@media (max-width: 768px) {
+    .main {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .top-bar h1 {
+        font-size: 1.5rem;
+    }
+
+    .stats>div {
+        padding: 1.5rem;
+    }
+
+    .stats h2 {
+        font-size: 2rem;
+    }
+}
