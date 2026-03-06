@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Chế độ Thêm mới
             transactions.unshift(transaction);
             notification.textContent = 'Thêm thành công!';
+            notification.style.color = 'green';
         }
 
         localStorage.setItem('transactions', JSON.stringify(transactions));
